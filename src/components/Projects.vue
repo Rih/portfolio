@@ -140,11 +140,11 @@ export default {
           techs: ["JQuery", ".NET", "C#", "SQLServer"]
         },
         {
-          index: 8,
+          index: 9,
           name: "Backoffice ",
-          company: "Itau - Corpbanca",
+          company: "EFT Group",
           company_location: 'Santiago, Chile',
-          description: "Desarrollo de backoffice de Pagos masivos de nóminas",
+          description: "Desarrollo de backoffice de Hub de empresas",
           link: "",
           company_link: '',
           techs: ["JQuery", "Java", "XSLT", "Oracle"]
