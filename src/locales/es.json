@@ -1,4 +1,7 @@
 {
   "message": "hola i18n !!",
-  "lang": "Español"
+  "lang": "Español",
+  "resume": "Curriculum Vitae",
+  "projects": "Proyectos",
+  "inventory": "Sistema PWA de inventario de rodales y parcelas"
 }

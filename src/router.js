@@ -3,17 +3,26 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // Normal loading
-import HelloI18n from './components/HelloI18n.vue'
+import Resume from './components/Resume.vue'
+import Portfolio from './components/Portfolio.vue'
 
 // Define routes
 const routes = [
   {
     path: '/home',
-    redirect: '/'
+    redirect: '/es'
   },
   {
-    path: '/:lang', name: 'hello2',
-    component: HelloI18n,
+    path: '/:lang', name: 'portfolio',
+    component: Portfolio,
+    beforeEnter:(to, from, next) => {
+        Vue.config.lang = to.params.lang;
+        next();
+    }
+  },
+  {
+    path: '/:lang/resume', name: 'resume',
+    component: Resume,
     beforeEnter:(to, from, next) => {
         Vue.config.lang = to.params.lang;
         next();
@@ -21,7 +30,7 @@ const routes = [
   },
   {
     path: '*', name: 'not-found',
-    component:  HelloI18n
+    component:  Portfolio
   }
 ]
 
