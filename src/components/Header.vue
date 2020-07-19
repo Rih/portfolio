@@ -1,8 +1,24 @@
 <template>
   <div class="header-container">
     <div class="header-container__item align-center">
-      <h3>{{ $t('resume') }}</h3>
+      <router-link
+        to="/" exact
+      >
+        <v-btn class="action-icon mx-2" fab small color="gray">
+          <h3>{{ $t('resume') }}</h3>
+        </v-btn>
+      </router-link>
+      
     </div>
+
+    <v-spacer></v-spacer>
+    <router-link
+        to="/es/resume" exact
+      >
+        <v-btn class="action-icon mx-2" fab small color="gray">
+          Resume
+        </v-btn>
+      </router-link>
     <v-spacer></v-spacer>
     <div class="header-container__item pull-right" >
       <v-switch color="green" v-model="language" @change="setLanguage" :label="$t('lang')"></v-switch>
