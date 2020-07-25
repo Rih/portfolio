@@ -3,5 +3,14 @@
   "lang": "Español",
   "resume": "Curriculum Vitae",
   "projects": "Proyectos",
+  "companies": "Empresas",
+  "contact": "Contacto",
+  "aboutme": "Sobre mí",
+  "aboutme_content": "Ingeniero del sur de Chile, con intereses varios",
+  "profiles": "Perfiles",
+  "name": "Rodrigo Díaz",
+  "profession": "Ingeniero de Software",
+  "keep_touch": "Quiero contactarme",
+  "cv": "Hoja de vida",
   "inventory": "Sistema PWA de inventario de rodales y parcelas"
 }

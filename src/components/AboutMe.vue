@@ -1,10 +1,13 @@
 <template>
    <v-container>
-    <v-row class="text-center">
-      <v-col cols="12">
-        Yo
-      </v-col>
-    </v-row>
+    <div class="text-center">
+      <h1 class="display-2 font-weight-bold mb-3">
+          {{ $t('aboutme') }}
+      </h1>
+      <p style="text-align:justify; word-wrap: break-word;">
+        {{ $t('aboutme_content') }}
+      </p>
+    </div>
   </v-container>
 </template>
 

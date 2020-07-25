@@ -1,12 +1,24 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <div class="project-item__container">
+      <div class="company-item__container">
         <v-card
-          class="mx-auto project__item-box"
+          class="mx-auto company-item__box"
           cols="12"
         >
-          
+          <v-card-title>
+            <v-col>Ingeniero de Software</v-col>
+            <v-col>marzo 2020 - julio 2020</v-col> 
+          </v-card-title>
+          <v-card-subtitle>
+            <v-col>Sistematiza SpA</v-col>
+          </v-card-subtitle>
+          <v-card-text>
+            Sistematiza SpA
+          </v-card-text>
+          <v-card-actions>
+            Sistematiza SpA
+          </v-card-actions>
         </v-card>
       </div>
     </v-row>
@@ -91,36 +103,15 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.project__item-container
-  display: flex
-  flex-wrap: wrap
 
-.project-item__container
+.company-item__container
   display: flex
   justify-content: space-between
   flex-wrap: wrap
+  flex-flow: column wrap
+  width: 100%
 
-
-.project__item-box
-  margin: 10px
-  width: 400px
-  height: 490px
-  align-items: stretch
-  align-self: center
-
-.project__item-box_title
-  text-align: center
-.project__item-box_project
-  position: relative
-  top: -10px
-  right: -180px
-.project__item-box_company
-  position: relative
-  top: -10px
-  text-align: justify
-  font-size: 10px
-.project__item-box_description
-  position: relative
-  top: -20px
-  text-align: justify
+.company-item__box
+  width: 100%
+  align-self: flex-start
 </style>

@@ -24,8 +24,7 @@
         </h1>
       </v-col>
       <v-col class="mb-8">
-        <v-btn @click="() => downloadCV('sp')">Español</v-btn>
-        <v-btn @click="() => downloadCV('en')">English</v-btn>
+        
       </v-col>
       <v-col class="mb-4" cols="12">
         <Certification />
@@ -40,18 +39,13 @@
   import Studies from '@/components/Studies.vue'
   import Certification from '@/components/Certification.vue'
   export default {
-    name: 'HelloWorld',
+    name: 'resume',
 
     data: () => ({
-     pdfLink : {
-       en: require('../assets/Resume_en_Rodrigo.pdf'),
-       sp: require('../assets/Resume_sp_Rodrigo.pdf'),
-     }
+     
     }),
     methods:{
-      downloadCV(lang){
-        window.open(this.pdfLink[lang])
-      }
+      
     },
     components: {
       Companies,

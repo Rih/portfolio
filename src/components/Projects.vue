@@ -13,7 +13,7 @@
           </a>
           <v-divider></v-divider>
           <v-row no-gutters>
-            <v-card-title>
+            <v-col cols="12">
               <h3 class="project__item-box_title">{{ project.name }}</h3>
               <div class="project__item-box_project">
                 <a v-if="project.link" :href="project.link">
@@ -25,8 +25,7 @@
                   </v-tooltip>
                 </a>
               </div>
-            </v-card-title>
-
+            </v-col>
             <v-col cols="12">
               <a :href="project.company_link">
                 <span class="project__item-box_company">{{ project.company }} - {{ project.company_location }}</span>
@@ -101,7 +100,7 @@ export default {
         },
         {
           index: 5,
-          name: "Módulo de Gestión de Alimentos",
+          name: "Módulo Gestión de Alimentos",
           company: "Servicio Salud Valdivia",
           company_location: 'Valdivia, Chile',
           description: "Módulo de entrega de alimentos, del sector macro sur",
@@ -135,19 +134,9 @@ export default {
           company: "Itau - Corpbanca",
           company_location: 'Santiago, Chile',
           description: "Desarrollo de backoffice de Pagos masivos de nóminas",
-          link: "",
-          company_link: '',
+          link: '#',
+          company_link: '#',
           techs: ["JQuery", ".NET", "C#", "SQLServer"]
-        },
-        {
-          index: 9,
-          name: "Backoffice ",
-          company: "EFT Group",
-          company_location: 'Santiago, Chile',
-          description: "Desarrollo de backoffice de Hub de empresas",
-          link: "",
-          company_link: '',
-          techs: ["JQuery", "Java", "XSLT", "Oracle"]
         },
       ]
     };
@@ -176,13 +165,16 @@ export default {
 
 .project__item-box_title
   text-align: center
+  margin-top:5px
+  font-size: 18px
+
 .project__item-box_project
   position: relative
-  top: -10px
+  top: -25px
   right: -180px
 .project__item-box_company
   position: relative
-  top: -10px
+  top: -20px
   text-align: justify
   font-size: 10px
 .project__item-box_description

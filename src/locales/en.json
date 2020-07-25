@@ -3,5 +3,14 @@
   "lang": "English",
   "resume": "Resume",
   "projects": "Projects",
+  "companies": "Companies",
+  "contact": "Contact",
+  "aboutme": "About",
+  "aboutme_content": "",
+  "profiles": "Profiles",
+  "name": "Rodrigo Díaz",
+  "profession": "Software Engineer",
+  "keep_touch": "Keep in Touch",
+  "cv": "Resume",
   "inventory": "Sistema PWA de inventario de rodales y parcelas"
 }
