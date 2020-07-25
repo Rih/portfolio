@@ -1,19 +1,19 @@
 <template>
     <div style="width:100%;">
-      <div style="width:100%;display:flex; align-items: center; height:80px; bottom:0px">
-        <v-col class="align-center">
-          <span>Rodrigo - 2020™ </span>
-          <span>+569 67618088</span>
-        </v-col>
-        <v-col class="align-center">
+      <div class="footer__container" style="">
+        <div class="footer_item text-center">
+          <p>Rodrigo - 2020™ </p>
+          <p>+569 67618088</p>
+        </div>
+        <div class="footer_item text-center">
            <v-row  no-gutters>
              <v-col cols="12">
                 <v-btn @click="downloadCV">{{ $t('cv') }}</v-btn>
              </v-col>
           
           </v-row>
-        </v-col>
-        <v-col class="align-center">
+        </div>
+        <div class="footer_item text-center">
           <v-row no-gutters>
             <v-col cols="12">
             <a v-for="soc in social" :key="soc.index" :href="soc.link">
@@ -28,7 +28,7 @@
             </a>
             </v-col>
           </v-row>
-        </v-col>
+        </div>
       </div>
     </div>
 </template>
@@ -61,3 +61,15 @@
     },
   }
 </script>
+
+<style lang="sass" scoped>
+.footer__container
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  flex-wrap: wrap
+  @media (max-width: 540px)
+    grid-template-columns: repeat(1, 1fr)
+  
+.footer_item
+  align-self: center
+</style>

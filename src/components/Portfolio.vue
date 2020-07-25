@@ -1,8 +1,8 @@
 <template>
-  <v-container>
+  <div >
     <v-row class="text-center">
       <div class="about-me__container">
-      <div  class="about-me__item mb-4">
+      <div class="about-me__item mb-4">
           <v-avatar 
             class="profile"
             size="260"
@@ -27,7 +27,7 @@
     </v-row>
     <v-row class="text-center">
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
+        <h1 cols="12" class="display-2 font-weight-bold mb-3">
             {{ $t('projects') }}
         </h1>
       </v-col>
@@ -37,12 +37,12 @@
     </v-row>
 
     <v-row class="contact__container text-center">
-      <v-col cols="12" class="mb-4">
+      <v-col cols="12" xs="12" class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
             {{ $t('profiles') }}
         </h1>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" md="6" sm="12" xs="12">
         <template>
           <v-card
             class="mx-auto"
@@ -63,7 +63,7 @@
           </v-card>
         </template>
       </v-col>
-      <v-col cols="6">
+      <v-col cols="12" md="6" sm="12" xs="12">
         <template>
           <v-card
             class="mx-auto"
@@ -92,9 +92,7 @@
           </v-btn>
       </v-col>
     </v-row>
-
-
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -208,13 +206,17 @@
   width: 100%
 .contact__form_btn
   height: 6.5em!important
+  @media (max-width: 540px)
+    height: 5.3em!important
+    width: 100%!important
 
 .about-me__container
   display: grid
   grid-template-columns: repeat(2, 1fr)
   flex-wrap: wrap
-  @media (max-width: 768px)
+  @media (max-width: 540px)
     grid-template-columns: repeat(1, 1fr)
+    width: 100%!important
   
 .about-me__item
   margin: 10px

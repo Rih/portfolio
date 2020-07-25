@@ -6,7 +6,6 @@
           class="mx-auto project__item-box"
           v-for="project in projects"
           :key="project.index"
-          cols="12"
         >
           <v-row no-gutters>
             <v-col cols="12">
@@ -189,6 +188,8 @@ export default {
   width: 550px
   align-items: stretch
   align-self: center
+  @media (max-width: 375px)
+    width: 350px
 
 .project__item-box_title
   text-align: center
@@ -199,6 +200,8 @@ export default {
   position: relative
   top: -25px
   right: -180px
+  @media (max-width: 540px)
+    right: -120px
 .project__item-box_company
   position: relative
   top: -20px
@@ -215,6 +218,10 @@ export default {
 .project__item-image 
   border-radius: 10px!important
   object-fit: cover
+  @media (max-width: 540px)
+    width: 100%
 .project__item-box-tech
   height: 90px
+  @media (max-width: 540px)
+    height: 120px
 </style>

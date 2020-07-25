@@ -11,7 +11,7 @@
       
     </div>
     <div class="header-container__item pull-right">
-      <v-switch color="green" v-model="darkMode" @change="setDark" :label="$t('dark')"></v-switch>
+      <v-switch color="green" v-model="darkMode" @change="setDark" :label=" darkMode ? $t('dark') : $t('light')"></v-switch>
     </div>
     <div class="header-container__item pull-right">
       <v-switch color="green" v-model="language" @change="setLanguage" :label="$t('lang')"></v-switch>
@@ -21,11 +21,11 @@
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "header",
   props: {},
   data: () => ({
     language: true,
-    darkMode: true
+    darkMode: false
   }),
   methods: {
     setLanguage(event) {
@@ -48,7 +48,7 @@ export default {
   justify-content: flex-start
   width: 100%
 .header-container__menu
-  display:flex
+  display: flex
   justify-content: flex-start
   flex-direction: column
 
