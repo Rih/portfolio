@@ -15,7 +15,6 @@
         </v-col>
         <v-col class="align-center">
           <v-row no-gutters>
-            <v-col cols="12"><h4>{{ $t('social') }}</h4></v-col>
             <v-col cols="12">
             <a v-for="soc in social" :key="soc.index" :href="soc.link">
               <v-btn class="mx-2" fab color="gray">
@@ -51,13 +50,7 @@
           description: 'Perfil Linkedin',
           link: 'https://www.linkedin.com/in/rodrigo-diaz-flores-37a5159b/',
         },
-        {
-          index: 2,
-          name: 'github',
-          mdi: 'github',
-          description: 'Perfil github',
-          link: 'https://www.github.com/Rih',
-        },
+        
         
       ]
     }),

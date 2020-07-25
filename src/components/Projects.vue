@@ -8,9 +8,13 @@
           :key="project.index"
           cols="12"
         >
-          <a :href="project.link">
-            <v-img :src="require('../assets/logo.svg')" class="my-3" contain height="200" />
-          </a>
+          <v-row no-gutters>
+            <v-col cols="12">
+            <a :href="project.link">
+              <v-img :src="project.main_image" class="project__item-image my-3 " height="380" />
+            </a>
+            </v-col>
+          </v-row>
           <v-divider></v-divider>
           <v-row no-gutters>
             <v-col cols="12">
@@ -32,15 +36,23 @@
               </a>
             </v-col>
           </v-row>
-          <v-card-text>
-            <p class="project__item-box_description">{{ project.description }}</p>
-          </v-card-text>
-          <v-divider class="mx-2"></v-divider>
-          <v-card-text>
-            <v-col cols="10">
-              <v-chip class="mr-4" outlined v-for="(tech, t) in project.techs" :key="t">{{ tech }}</v-chip>
+          <v-row class="project__item-box-desc_container" no-gutters>
+            <v-col cols="12">
+              <v-card-text>
+                <p class="project__item-box_description">{{ project.description }}</p>
+              </v-card-text>
             </v-col>
-          </v-card-text>
+          </v-row>
+          <v-divider class="mx-2"></v-divider>
+          <v-row class="project__item-box-tech" no-gutters>
+            <v-col cols="12">
+              <v-card-text>
+                <v-col cols="10">
+                  <v-chip class="mr-4" outlined v-for="(tech, t) in project.techs" :key="t">{{ tech }}</v-chip>
+                </v-col>
+              </v-card-text>
+            </v-col>
+          </v-row>
         </v-card>
       </div>
     </v-row>
@@ -66,7 +78,9 @@ export default {
           description: 'Sistema de análisis e inventario en terreno para rodales y parcelas',
           link: 'http://xstock.sistematiza.cl',
           company_link: 'http://www.sistematiza.cl',
-          techs: ['VueJS', 'Django', 'docker']
+          main_image: require('../assets/xstock00.png'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
+          techs: ['VueJS', 'Django', 'docker', 'PostgreSQL']
         },
         {
           index: 2,
@@ -76,17 +90,21 @@ export default {
           description: 'Plataforma publicación de sitios de mapas sobre estándar geoserver',
           link: 'http://visualizador.sistematiza.cl',
           company_link: 'http://www.sistematiza.cl',
-          techs: ['VueJS', 'Django', 'docker']
+          main_image: require('../assets/visor00.png'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
+          techs: ['VueJS', 'Django', 'docker', 'PostgreSQL']
         },
         {
           index: 3,
           name: 'TecnoTracker',
           company: 'Newdev SpA',
           company_location: 'Valdivia, Chile',
-          description: 'POC de tracking y alerta infectados covid',
+          description: 'POC de tracking y alerta de infectados covid',
           link: 'http://www.newdev.cl',
           company_link: 'http://www.newdev.cl',
-          techs: ['react-native', 'Android', "Django"]
+          main_image: require('../assets/tecnotracker00.jpg'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
+          techs: ['react-native', 'Android', 'Django', 'SQlite']
         },
         {
           index: 4,
@@ -96,7 +114,9 @@ export default {
           description: "Desarrollo y mantenimiento plataforma marketplace de importación de productos a colombia",
           link: "http://www.ultrabox.com",
           company_link: 'http://www.ultrabox.com/principal/marketplace',
-          techs: ["ReactJS", "chatbot", "Django"]
+          main_image: require('../assets/ultrabox00.png'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
+          techs: ["ReactJS", "chatbot", 'Django', 'PostgreSQL']
         },
         {
           index: 5,
@@ -106,7 +126,9 @@ export default {
           description: "Módulo de entrega de alimentos, del sector macro sur",
           link: "https://www.rasvaldivia.cl/rasvaldivia/index.php",
           company_link: 'http://www.ssvaldivia.cl',
-          techs: ["JQuery", "PHP Codeigniter", "oracle"]
+          main_image: require('../assets/no_disponible.png'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
+          techs: ['JQuery', 'PHP Codeigniter', 'Oracle']
         },
         {
           index: 6,
@@ -116,7 +138,9 @@ export default {
           description: "Módulo de historial de antecedentes clínicos de pacientes",
           link: "https://www.rasvaldivia.cl/rasvaldivia/index.php",
           company_link: 'http://www.ssvaldivia.cl',
-          techs: ["JQuery", "PHP Codeigniter", "Oracle"]
+          main_image: require('../assets/no_disponible.png'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
+          techs: ['JQuery', 'PHP Codeigniter', 'Oracle']
         },
         {
           index: 7,
@@ -126,7 +150,9 @@ export default {
           description: "Desarrollo y mantenimiento plataforma e-learning de capacitación",
           link: "https://www.classroomtv.com",
           company_link: 'https://www.classroomtv.com',
-          techs: ["BackboneJS", "PHP Yii", "MySQL"]
+          main_image: require('../assets/no_disponible.png'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
+          techs: ['BackboneJS', 'RoR', 'PHP Yii', 'MySQL']
         },
         {
           index: 8,
@@ -135,6 +161,8 @@ export default {
           company_location: 'Santiago, Chile',
           description: "Desarrollo de backoffice de Pagos masivos de nóminas",
           link: '#',
+          main_image: require('../assets/no_disponible.png'),
+          images: ['../assets/logo.svg', '../assets/logo.svg'],
           company_link: '#',
           techs: ["JQuery", ".NET", "C#", "SQLServer"]
         },
@@ -158,8 +186,7 @@ export default {
 
 .project__item-box
   margin: 10px
-  width: 400px
-  height: 490px
+  width: 550px
   align-items: stretch
   align-self: center
 
@@ -177,8 +204,17 @@ export default {
   top: -20px
   text-align: justify
   font-size: 10px
+.project__item-box-desc_container
+  height: 120px
+
 .project__item-box_description
   position: relative
   top: -20px
   text-align: justify
+
+.project__item-image 
+  border-radius: 10px!important
+  object-fit: cover
+.project__item-box-tech
+  height: 90px
 </style>

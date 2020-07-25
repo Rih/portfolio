@@ -1,9 +1,9 @@
 <template>
   <v-app >
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="green darken-1" dark>
       <Header />
     </v-app-bar>
-    <v-content>
+    <v-content app>
       <router-view></router-view>
     </v-content>
      <v-divider></v-divider>

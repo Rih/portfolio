@@ -51,7 +51,7 @@
           >
             <v-list-item >
               <v-list-item-content>
-                <v-list-item-title>Repositorios</v-list-item-title>
+                <v-list-item-title>{{ $t('repositories') }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
             <v-list-item v-for="repo in repos" :key="repo.index"  two-line>
@@ -72,7 +72,7 @@
           >
             <v-list-item >
               <v-list-item-content>
-                <v-list-item-title>Competencia</v-list-item-title>
+                <v-list-item-title>{{ $t('others') }}</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
             <v-list-item v-for="soc in social" :key="soc.index"  two-line>
@@ -86,11 +86,6 @@
       </v-col>
     </v-row>
     <v-row class="contact__container text-center">
-      <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-            {{ $t('contact') }}
-        </h1>
-      </v-col>
       <v-col cols="12">
           <v-btn class="contact__form_btn" @click="contactMe"> 
             <h1 class="display-2 font-weight-bold mb-3">{{ $t('keep_touch') }}</h1>
