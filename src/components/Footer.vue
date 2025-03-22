@@ -2,7 +2,7 @@
     <div style="width:100%;">
       <div class="footer__container" style="">
         <div class="footer_item text-center">
-          <p>Rodrigo - 2020™ </p>
+          <p>Rodrigo - 2025™ </p>
           <p>+569 22437274</p>
         </div>
         <div class="footer_item text-center">
